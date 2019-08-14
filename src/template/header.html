@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/fonts/BebasNeue.css">
+    <link rel="stylesheet" href="/fonts/intro.css">
+    <link rel="stylesheet" href="/fonts/AvenirNextCyr.css">
+    <link rel="stylesheet" href="/fonts/Akrobat.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>test</title>
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__container container d-flex">
+                <a href="#" class="header__logo logo">
+                    <img src="../img/logo.png" class="logo__image" alt="logo">
+                </a>
+                <div class="header__col d-flex">
+                    <div class="header__contacts header-contacts h-contacts_icon-address d-flex">
+                        <div class="h-contacts__info">
+                            <span>Ул Тверская, 17, офис 738</span>
+                            <p class="time-work">время работы: <span class="time-work__info">пн-вс, 10:00-22:00</span></p>
+                        </div>
+                    </div>
+                    <div class="header__contacts header-contacts h-contacts_icon-phone d-flex">
+                        <div class="h-contacts__info d-flex">
+                            <a href="#" class="h-contacts__link">+7<span class="h-contacts__big"> (800) </span>999-99-99</a>
+                            <a href="#" class="header__button callback" data-remodal-target="modal-callback">Заказать звонок</a>
+                        </div>
+                    </div>
+                    <ul class="header__social list list_none social d-flex">
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link_icon social__link_icon-vk"></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link_icon social__link_icon-facebook"></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link_icon social__link_icon-inst"></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link_icon social__link_icon-youtube"></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link_icon social__link_icon-odnoklassniki"></a>
+                        </li>
+                    </ul>
+                    <div class="header__basket basket">
+                        <a href="/personal/cart/" class="basket__link">
+                            <p class="basket__figure">
+                                <span class="basket__count">1</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__container container d-flex">
+                <nav class="header__nav">
+                    <ul class="header__menu menu list list_none row d-flex">
+                        <li class="menu__item menu__item_icon-arrow">
+                            <a href="#" class="menu__link">Лестницы</a>
+                            <ul class="menu__dropdown menu list list_none">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По материалу</a>
+                                    <ul class="menu__dropdown dropdown menu lis list_none">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Лестницы</a>
+                                            <ul class="menu__dropdown dropdown menu lis list_none">
+                                                <li class="menu__item">
+                                                    <a href="#" class="menu__link">Лестницы</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Из сосны</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Из хвои</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Из лиственницы</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Из бука</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По виду каркаса</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На металлическом каркасе</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По конструкции</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Г-образные</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">П-образные</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Винтовые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Забежные</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Маршевые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Двухмаршевые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Трехмаршевые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Угловые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Поворотные</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Поворотные на 90 градусов</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Гусиный шаг</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Открытые</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По наличию площадки</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">С площадкой</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">С двумя площадками</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Эконом</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Премиум-класса</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Элитные</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Скидки</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По применению</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На мансарду</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На второй этаж</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На улицу</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Для загородного дома и дачи</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">В квартиру</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">По технологии сборки</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На косоурах</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">На металлическом каркасе</a>
+                                    <ul class="menu__dropdown dropdown menu lis list_none">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Лестницы</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Лестницы</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Лестницы</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Лестницы</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item_icon-arrow">
+                            <a href="#" class="menu__link">Ступени</a>
+                        </li>
+                        <li class="menu__item menu__item_icon-arrow">
+                            <a href="#" class="menu__link">Перила</a>
+                        </li>
+                        <li class="menu__item menu__item_icon-arrow">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                        </li>
+                        <li class="menu__item menu__item_icon-arrow">
+                            <a href="#" class="menu__link">Услуги</a>
+                        </li>
+                        <li class="menu__item ">
+                            <a href="#" class="menu__link">Статьи</a>
+                        </li>
+                        <li class="menu__item ">
+                            <a href="#" class="menu__link">Калькуляторы</a>
+                        </li>
+                        <li class="menu__item ">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="#" class="header__search search d-flex">
+                    <input type="text" class="search__input">
+                    <button class="search__button" type="submit">Искать</button>
+                </form>
+            </div>
+        </div>
+    </header>
