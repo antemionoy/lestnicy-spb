@@ -13,18 +13,25 @@
     </section>
     <section class="card">
         <div class="container card__container">
-            <h1 class="card__title title title_h1 title_center">Лестница из дуба поворотная</h1>
             <div class="card__grid row d-flex">
-                <div class="card__col col">
-                    <div class="card__carousel fotorama" data-nav="thumbs" data-thumbwidth="70" data-thumbheight="70" data-thumbborderwidth="0" data-thumbmargin="10" data-allowfullscreen="true" data-maxheight="380" data-maxwidth="570">
-                        <img src="img/image7.jpg" alt="">
-                        <img src="img/image7.jpg" alt="">
-                        <img src="img/image7.jpg" alt="">
-                        <img src="img/image7.jpg" alt="">
+                <div class="card__col col col-6">
+                    <div class="card__slider c-slider">
+                        <div class="c-slider__photo photo-zoom">
+                            <a href="img/image7.jpg" class="c-slider__link">
+                                <img src="img/image7.jpg" class="c-slider__image" alt="">
+                            </a>
+                        </div>
+                        <div class="c-slider__nav slider-nav owl-slider">
+                            <!-- Первая каринка должна иметь такой же путь как у основной, и класс current-slide -->
+                            <img src="img/image7.jpg" data-index="0" class="slider-nav__image current-slide" alt="">
+                            <img src="https://static.tildacdn.com/tild3039-3335-4932-b666-653037356336/stadium.jpg" data-index="1" class="slider-nav__image" alt="">
+                            <img src="img/image7.jpg" data-index="2" class="slider-nav__image" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="card__col card__big col">
                     <div class="card__content d-flex">
+                        <h1 class="card__title title title_h1">Лестница из дуба поворотная</h1>
                         <div class="card__top d-flex">
                             <p class="card__article">Артикул: 128</p>
                             <div class="card__presence presence presence_check-green">
@@ -32,12 +39,37 @@
                                 <div class="presence__text">В наличии</div>
                             </div>
                         </div>
-                        <p class="card__name">Каталог лестниц: <a href="#" class="card__link">Г-образные лестницы</a></p>
-                        <p class="card__name">Материалы лестницы: <a href="#" class="card__link">Лестницы из бука</a></p>
-                        <p class="card__name">Лестницы для помещения: <a href="#" class="card__link">Лестницы из бука</a></p>
+                        <div class="card__body">
+                            <p class="card__name">Каталог лестниц: <a href="#" class="card__link">Г-образные лестницы</a> <a href="#" class="card__link">Г-образные лестницы</a> <a href="#" class="card__link">Г-образные лестницы</a> <a href="#" class="card__link">Г-образные лестницы</a></p>
+                            <p class="card__name">Материалы лестницы: <a href="#" class="card__link">Лестницы из бука</a></p>
+                            <p class="card__name">Лестницы для помещения: <a href="#" class="card__link">Лестницы из бука</a></p>
+                        </div>
                         <div class="card__footer d-flex">
-                            <p class="card__price">от 95 000 руб</p>
+                            <p class="card__price">от 95 000 ₽</p>
                             <a href="#" class="card__btn button">Добавить в корзину</a>
+                        </div>
+                        <div class="card__tabs card-tabs">
+                            <ul class="card-tabs__nav tabs-nav list d-flex">
+                                <li class="tabs-nav__item">
+                                    <button class="tabs-nav__btn tabs__btn tabs__btn_active" type="button" data-tab-category="1">Доставка</button>
+                                </li>
+                                <li class="tabs-nav__item">
+                                    <button class="tabs-nav__btn tabs__btn" type="button" data-tab-category="2">Отзывы</button>
+                                </li>
+                                <li class="tabs-nav__item">
+                                    <button class="tabs-nav__btn tabs__btn" type="button" data-tab-category="3">Оплата</button>
+                                </li>
+                                <li class="tabs-nav__item">
+                                    <button class="tabs-nav__btn tabs__btn" type="button" data-tab-category="4">Гарантии</button>
+                                </li>
+                            </ul>
+                            <div class="card-tabs__content card-tabs__reviews catalog__section card-reviews is-open" data-tab-content="1">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quos quas architecto voluptates quidem modi, nam, accusantium a officiis aut doloribus, debitis. Laborum, eveniet, enim. In quo quae veniam ducimus.
+                            </div>
+                            <div class="card-tabs__content card-tabs__reviews catalog__section card-reviews" data-tab-content="2">
+                            </div>
+                            <div class="card-tabs__content card-tabs__reviews catalog__section card-reviews" data-tab-content="3">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,23 +233,6 @@
                     <img src="img/category__image.jpg" alt="Продукт" class="work__image">
                 </a>
             </div>
-        </div>
-    </section>
-    <section class="paymant">
-        <div class="container paymant__container d-flex">
-            <h2 class="paymant__title title title_h3">Принимаем к оплате:</h2>
-            <ul class="paymant__list list list_none d-flex">
-                <li class="paymant__item">
-                    <a href="#" class="paymant__link">
-                        <img src="img/visa.png" alt="payment__icon" class="paymant__image">
-                    </a>
-                </li>
-                <li class="paymant__item">
-                    <a href="#" class="paymant__link">
-                        <img src="img/master-card.png" alt="payment__icon" class="paymant__image">
-                    </a>
-                </li>
-            </ul>
         </div>
     </section>
 </main>

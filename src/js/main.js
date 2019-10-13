@@ -146,9 +146,151 @@ function changeCheckbox(checkbox, btn) {
     });
 }
 
+function catalogChange() {
+    var tabTrigger = document.querySelectorAll('.tabs__btn');
+
+    tabTrigger.forEach(function(tabTrigger, index) {
+
+        tabTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var currentTab = document.querySelector('.catalog__section[data-tab-content="' + this.dataset.tabCategory + '"]');
+
+            console.log(this.dataset.tabCategory);
+
+            if(currentTab){
+                // remove classess
+                document.querySelector('.catalog__section.is-open').classList.remove('is-open');
+                document.querySelector('.tabs__btn.tabs__btn_active').classList.remove('tabs__btn_active');
+                // add classes
+                currentTab.classList.add('is-open');
+                this.classList.add('tabs__btn_active');
+            }
+
+
+        });
+    });
+}
+
+
+function cardSlider() {
+    var logoCarousel = $(".c-slider__nav");
+    var sliderImage = $('.c-slider__image');
+    var imageLink = $('.c-slider__link');
+    var dataSrc = [];
+
+    sliderImage.each( function(){
+        var thisSrc = this.src;
+
+        thisSrc = this.getAttribute('src');
+
+        dataSrc.push(thisSrc);
+    });
+
+    logoCarousel.owlCarousel({
+        items: 3,
+        loop: true,
+        nav: true,
+        dots: false,
+        responsive: {
+            320: {
+                items: 2
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            1023: {
+                items: 3
+            }
+        }
+    });
+
+    var pictureDataSrc;
+
+    logoCarousel.on("changed.owl.carousel", function(e) {
+        var currentIndex = e.item.index;
+        var currentSlide = $(e.target).find(".owl-item").eq(currentIndex);
+        var pictureDataIndex = currentSlide.find('img').data('index');
+        pictureDataSrc = currentSlide.find('img').attr('src');
+        $('.owl-item img').removeClass('current-slide');
+        currentSlide.find('img').addClass('current-slide');
+        putGraphSrc(pictureDataSrc);
+    });
+
+    var putGraphSrc = function(src) {
+        sliderImage.attr("src", src);
+        imageLink.attr("href", src);
+    };
+
+    putGraphSrc(pictureDataSrc);
+}
+
+
+function showAllFiles(blockHide, blockItem) {
+
+    var item;
+    var itemClick;
+    var itemInset;
+    var notFalseFlag = true;
+
+    var itemMore = $('<button>показать еще</button>')
+
+    $(blockHide).each(function(i){
+
+        item = $(this);
+        itemInset = item.find(blockItem);
+        item.append('<button type="button" class="item__more">показать еще</button>');
+        itemClick = item.find('.item__more');
+
+        console.log(itemInset);
+
+        if(itemInset.length > 7){
+
+            var notFalseFlag = true;
+
+            itemInset.slice(7).hide();
+
+            itemClick.on('click', function(e){
+                e.preventDefault();
+
+                if (notFalseFlag) {
+                    notFalseFlag = false;
+
+                    $(this).parents(blockHide).find(blockItem).slice(7).show('fast');
+                    $(this).parents(blockHide).find('.item__more').text('свернуть');
+
+
+                } else {
+                    notFalseFlag = true;
+
+                    $(this).parents(blockHide).find(blockItem).slice(7).hide('fast');
+                    $(this).parents(blockHide).find('.item__more').text('показать еще');
+
+                }
+
+            });
+
+        }
+
+        else{
+            itemClick.hide();
+        }
+
+    });
+
+}
 
 
 $(function() {
+
+    showAllFiles('.dropdown__category', '.menu__item');
+
+    cardSlider();
+
+    catalogChange();
 
     yaMap();
 
@@ -156,6 +298,7 @@ $(function() {
 
     zoomPopUp('.gallery');
 
+    zoomPopUp('.photo-zoom');
 
     $('.promo__slider').owlCarousel({
         loop: false,
@@ -187,35 +330,3 @@ $(function() {
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
